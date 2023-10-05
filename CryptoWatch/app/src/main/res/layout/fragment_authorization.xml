@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Authorization">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@color/white">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добро пожаловать"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="32dp" />
+
+        <EditText
+            android:id="@+id/editTextLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите логин"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите пароль"
+            android:inputType="textPassword"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Войти"
+            android:layout_marginTop="32dp"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/textViewNoAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Нет аккаунта?"
+            android:paddingTop="32dp"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/textViewError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+</FrameLayout>

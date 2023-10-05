@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        tools:ignore="MissingConstraints,WebViewLayout">
+
+        <WebView
+            android:id="@+id/tradingview"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <TableRow>
+            <TextView
+                android:text="Изменение цены за 1 час:"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_price_change_percentage_1h_in_currency"
+                android:text="0.00%"
+                android:gravity="end"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Изменение цены за 24 часа:"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_price_change_percentage_24h_in_currency"
+                android:text="0.00%"
+                android:gravity="end"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Изменение цены за 7 дней:"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_price_change_percentage_7d_in_currency"
+                android:text="0.00%"
+                android:gravity="end"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Рыночная капитализация:"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_market_cap"
+                android:text="$0.00"
+                android:gravity="end"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Общий объем:"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_total_volume"
+                android:text="$0.00"
+                android:gravity="end"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Циркулирующее предложение:"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_circulating_supply"
+                android:text="0.00"
+                android:gravity="end"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Максимальное предложение:"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_max_supply"
+                android:text="0.00"
+                android:gravity="end"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Максимум за 24 часа:"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_high_24h"
+                android:text="$0.00"
+                android:gravity="end"
+                android:padding="8dp"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Минимум за 24 часа:"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/tv_low_24h"
+                android:text="$0.00"
+                android:gravity="end"
+                android:padding="8dp"/>
+        </TableRow>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_rating"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recuclerviewcomment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <EditText
+            android:id="@+id/profile_message_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Сообщение"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/buttonMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Отправить"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_message_edit"
+            android:visibility="gone"/>
+    </TableLayout>
+</ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
